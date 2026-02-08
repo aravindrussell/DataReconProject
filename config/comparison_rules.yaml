@@ -1,0 +1,83 @@
+# Comparison Rules Configuration for Data Comparison Framework
+
+comparison_config:
+  # Primary key(s) for matching records between source and target
+  primary_keys: ["id", "transaction_id"]
+  
+  # Columns to include in comparison (if empty, compares all)
+  columns_to_compare: []
+  
+  # Columns to exclude from comparison
+  exclude_columns: ["created_at", "updated_at", "sync_timestamp"]
+  
+  # Column-level comparison options
+  column_comparisons:
+    # Numeric columns - tolerance for float comparison
+    numeric_tolerance: 0.01
+    
+    # String columns
+    string_options:
+      case_sensitive: false
+      strip_whitespace: true  # Remove leading/trailing spaces
+      trim_spaces: true
+    
+    # NULL handling
+    null_handling:
+      treat_empty_as_null: true
+      null_vs_empty_mismatch: false  # If true, NULL != "" (empty string)
+    
+    # Data type matching
+    datatype_strict: false  # If true, int != float even if values are same
+    
+    # Date/Time columns
+    date_columns:
+      format: "%Y-%m-%d"  # Python date format
+      tolerance_days: 0
+
+# Mismatch thresholds
+thresholds:
+  # Fail test if mismatch percentage exceeds this
+  max_mismatch_percentage: 5.0
+  
+  # Fail test if record count differs by this percentage
+  max_record_diff_percentage: 1.0
+  
+  # Fail test if missing records exceed this count
+  max_missing_records: 10
+
+# Comparison types to perform
+comparison_types:
+  check_record_count: true
+  check_missing_records: true
+  check_extra_records: true
+  check_mismatched_values: true
+  check_column_structure: true  # Check if columns match between source/target
+
+# Report options
+report_options:
+  # Generate Excel report
+  generate_excel: true
+  excel_filename: "comparison_report.xlsx"
+  
+  # Generate CSV summary
+  generate_csv: true
+  csv_filename: "comparison_summary.csv"
+  
+  # Include sample of mismatches in report
+  include_mismatch_samples: true
+  sample_size: 100
+  
+  # Highlight rules for Excel
+  highlight_mismatches: true
+  highlight_missing: true
+  highlight_extra: true
+  
+  # Include execution metadata
+  include_metadata: true
+
+# Logging configuration
+logging:
+  log_level: "INFO"  # DEBUG, INFO, WARNING, ERROR, CRITICAL
+  log_file: "./logs/data_compare.log"
+  log_format: "[%(asctime)s] %(name)s - %(levelname)s - %(message)s"
+  console_output: true

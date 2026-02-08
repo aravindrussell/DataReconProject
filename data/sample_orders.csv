@@ -1,0 +1,9 @@
+order_id,customer_id,product_name,quantity,unit_price,order_date
+101,1,Laptop,1,1200.00,2024-01-15
+102,2,Mouse,5,25.00,2024-01-15
+103,3,Keyboard,3,75.00,2024-01-16
+104,1,Monitor,2,350.00,2024-01-16
+105,4,Printer,1,400.00,2024-01-17
+106,5,Scanner,1,200.00,2024-01-17
+107,2,USB Cable,10,10.00,2024-01-18
+108,3,External HDD,2,80.00,2024-01-18

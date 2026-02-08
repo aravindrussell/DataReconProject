@@ -1,0 +1,9 @@
+customer_id,name,email,city,amount,status
+1,Alice Johnson,alice@example.com,New York,1000.00,ACTIVE
+2,Bob Smith,bob@example.com,Los Angeles,2000.00,ACTIVE
+3,Charlie Brown,charlie@example.com,Chicago,1500.00,INACTIVE
+4,David Wilson,david@example.com,Houston,3000.00,ACTIVE
+5,Eve Davis,eve@example.com,Phoenix,2500.00,ACTIVE
+6,Frank Miller,frank@example.com,Philadelphia,1800.00,ACTIVE
+7,Grace Lee,grace@example.com,San Antonio,2200.00,INACTIVE
+8,Henry Taylor,henry@example.com,San Diego,2800.00,ACTIVE

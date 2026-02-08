@@ -1,0 +1,57 @@
+# Database Configuration for Data Comparison Framework
+# Supports: Oracle, SQL Server, MySQL, PostgreSQL
+
+databases:
+  source_db:
+    engine: "postgresql"  # Options: oracle, mssql, mysql, postgresql
+    host: "localhost"
+    port: 5432
+    database: "source_db"
+    username: "${DB_SOURCE_USER}"  # Use environment variables for sensitive data
+    password: "${DB_SOURCE_PASSWORD}"
+    driver: "psycopg2"  # For PostgreSQL
+
+  target_db:
+    engine: "postgresql"
+    host: "localhost"
+    port: 5432
+    database: "target_db"
+    username: "${DB_TARGET_USER}"
+    password: "${DB_TARGET_PASSWORD}"
+    driver: "psycopg2"
+
+  # Example Oracle configuration
+  oracle_source:
+    engine: "oracle"
+    host: "oracle-server.company.com"
+    port: 1521
+    database: "ORCL"
+    username: "${ORACLE_USER}"
+    password: "${ORACLE_PASSWORD}"
+    driver: "cx_Oracle"
+
+  # Example SQL Server configuration
+  mssql_target:
+    engine: "mssql"
+    host: "sqlserver.company.com"
+    port: 1433
+    database: "TargetDB"
+    username: "${MSSQL_USER}"
+    password: "${MSSQL_PASSWORD}"
+    driver: "pyodbc"
+
+  # Example MySQL configuration
+  mysql_source:
+    engine: "mysql"
+    host: "mysql-server.company.com"
+    port: 3306
+    database: "source_data"
+    username: "${MYSQL_USER}"
+    password: "${MYSQL_PASSWORD}"
+    driver: "mysql-connector-python"
+
+# Connection timeout in seconds
+connection_timeout: 30
+
+# Query execution timeout in seconds
+query_timeout: 300

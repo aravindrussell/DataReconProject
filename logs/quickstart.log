@@ -1,0 +1,33 @@
+[2026-02-08 20:35:52] main - INFO - ============================================================
+[2026-02-08 20:35:52] main - INFO - Data Comparison Framework - Quick Start Example
+[2026-02-08 20:35:52] main - INFO - ============================================================
+[2026-02-08 20:35:52] main - INFO - 
+[Step 1] Loading configurations...
+[2026-02-08 20:35:52] main - INFO - 
+[Step 2] Reading CSV file...
+[2026-02-08 20:35:52] main - INFO - 
+[Step 3] Creating sample database data...
+[2026-02-08 20:35:52] main - INFO - 
+[Step 4] Performing data comparison...
+[2026-02-08 20:35:52] main - INFO - 
+[Step 5] Comparison Results:
+[2026-02-08 20:35:52] main - INFO -   - Total Source Records: 5
+[2026-02-08 20:35:52] main - INFO -   - Total Target Records: 5
+[2026-02-08 20:35:52] main - INFO -   - Matched Records: 4
+[2026-02-08 20:35:52] main - INFO -   - Mismatched Records: 1
+[2026-02-08 20:35:52] main - INFO -   - Missing Records: 0
+[2026-02-08 20:35:52] main - INFO -   - Extra Records: 0
+[2026-02-08 20:35:52] main - INFO - 
+  Mismatch Details:
+[2026-02-08 20:35:52] main - INFO -     Key: 3
+[2026-02-08 20:35:52] main - INFO -       - amount: 150.0 != 150.5
+[2026-02-08 20:35:52] main - INFO - 
+[Step 6] Generating reports...
+[2026-02-08 20:35:53] main - INFO - 
+[Step 7] Execution Summary:
+[2026-02-08 20:35:53] main - INFO -   - Match Percentage: 80.00%
+[2026-02-08 20:35:53] main - INFO -   - Mismatch Percentage: 20.00%
+[2026-02-08 20:35:53] main - INFO -   - Overall Status: FAILED
+[2026-02-08 20:35:53] main - INFO - 
+============================================================
+[2026-02-08 20:35:53] main - INFO - ============================================================

@@ -1,0 +1,54 @@
+# File Configuration for Data Comparison Framework
+# Supports: CSV and Excel files
+
+file_sources:
+  csv_file:
+    type: "csv"
+    path: "./data/source_data.csv"
+    encoding: "utf-8"
+    delimiter: ","
+    skip_rows: 0
+    # Optional: specify columns to read (if None, reads all)
+    usecols: null
+    # Set True if first row is header
+    has_header: true
+
+  excel_file:
+    type: "excel"
+    path: "./data/source_data.xlsx"
+    # Sheet name or index (0-based)
+    sheet_name: "Sheet1"
+    # Rows to skip at the beginning
+    skip_rows: 0
+    # If True, use first row as column names
+    has_header: true
+    # Columns to read (if None, reads all)
+    usecols: null
+
+  csv_target:
+    type: "csv"
+    path: "./data/target_data.csv"
+    encoding: "utf-8"
+    delimiter: ","
+    skip_rows: 0
+    has_header: true
+
+  excel_multisheet:
+    type: "excel"
+    path: "./data/multisheet_data.xlsx"
+    # Can specify multiple sheets to combine
+    sheet_names: ["Sheet1", "Sheet2"]
+    skip_rows: 0
+    has_header: true
+
+# Default file handling options
+file_defaults:
+  # How to handle missing values
+  fill_missing: false
+  missing_value_strategy: "keep"  # Options: keep, fill_zero, fill_mean, fill_forward
+  
+  # Data type inference
+  infer_dtypes: true
+  
+  # Error handling
+  on_error: "raise"  # Options: raise, warn, skip

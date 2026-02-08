@@ -1,0 +1,41 @@
+# Data Comparison Framework - Python Dependencies
+
+# Core Data Processing
+pandas>=1.3.0
+# Pin a numpy compatible with modern Python (adjust if you use older Python)
+numpy>=1.26.1
+
+# Database Drivers
+psycopg2-binary>=2.9.0          # PostgreSQL
+mysql-connector-python>=8.0.26   # MySQL
+pyodbc>=4.0.0                    # SQL Server (ODBC)
+oracledb>=1.1.0                 # Oracle client library (pure-Python 'oracledb' is easier to install)
+# Note: If you require the legacy `cx_Oracle` package or the thick mode for
+# full OCI functionality, install Oracle Instant Client and Microsoft C++
+# Build Tools (or install a prebuilt cx_Oracle wheel matching your Python).
+
+# Excel support
+openpyxl>=3.1.5                  # Excel file writing with formatting
+xlrd>=2.0.0                      # Excel file reading
+
+# Configuration management
+PyYAML>=5.4.0                    # YAML configuration files
+
+# Robot Framework
+robotframework>=4.1.0
+# Note: `robotframework-libdoc` is not available on PyPI in some environments.
+# The `libdoc` tool is provided by Robot Framework core as `robot.libdoc`.
+# If you need a standalone libdoc installer, install Robot Framework or use
+# the `robot.libdoc` entry point. Remove this line if installation fails.
+
+# Logging and reporting
+python-dateutil>=2.8.0
+
+# Development and testing
+pytest>=6.2.0
+pytest-cov>=2.12.0
+flake8>=3.9.0                    # Code linting
+black>=21.0                      # Code formatting
+
+# Optional: advanced features
+sqlalchemy>=1.4.0                # ORM support

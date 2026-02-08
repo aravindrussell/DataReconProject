@@ -1,0 +1,2 @@
+matched_records,mismatched_records,missing_records,extra_records,total_source_records,total_target_records,status,mismatch_count,missing_count,extra_count,source_name,target_name,execution_timestamp
+4,1,0,0,5,5,FAILED,1,0,0,CSV_File,Database_Table,2026-02-08T20:35:53.531573
